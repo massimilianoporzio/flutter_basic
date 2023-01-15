@@ -11,7 +11,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(backgroundColor: Colors.amber),
+      ),
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => debugPrint('clicked'),
+          child: const Icon(Icons.ac_unit),
+        ),
         appBar: AppBar(
           title: const Text("Flutter Basic"),
         ),
